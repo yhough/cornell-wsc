@@ -100,116 +100,67 @@
         margin: 0 auto;
       }
 
-      /* WHAT TO EXPECT */
-      #what-to-expect {
+      /* RECRUITMENT LINKS */
+      #recruitment-links {
         background-color: var(--color-black);
         padding: 5rem 2rem 7rem;
       }
 
-      #what-to-expect .section-inner {
+      #recruitment-links .section-inner {
         max-width: 900px;
         margin: 0 auto;
       }
 
-      #what-to-expect .section-label {
-        text-align: center;
-        font-family: 'Manrope', sans-serif;
-        font-weight: 300;
-        font-size: 0.75rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--color-red);
-        margin-bottom: 0.5rem;
-      }
-
-      #what-to-expect h2 {
-        text-align: center;
-        font-size: 2.2rem;
-        color: var(--color-white);
-        margin-bottom: 4rem;
-      }
-
-      .steps {
+      .recruitment-actions {
         display: flex;
-        flex-direction: column;
-        gap: 0;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
       }
 
-      .step {
-        display: flex;
-        gap: 3rem;
-        align-items: flex-start;
-        padding: 2.25rem 0;
-        border-top: 0.09rem solid rgba(255, 250, 250, 0.08);
-      }
-
-      .step:last-child {
-        border-bottom: 0.09rem solid rgba(255, 250, 250, 0.08);
-      }
-
-      .step-number {
-        font-family: 'Baskerville', serif;
-        font-style: italic;
-        font-size: 2rem;
-        color: var(--color-red);
-        opacity: 0.5;
-        flex-shrink: 0;
-        width: 2.5rem;
-        line-height: 1;
-        padding-top: 0.1rem;
-      }
-
-      .step-content h3 {
-        font-family: 'Baskerville', serif;
-        font-size: 1.2rem;
-        color: var(--color-white);
-        margin-bottom: 0.35rem;
-      }
-
-      .step-content p {
-        font-family: 'Manrope', sans-serif;
-        font-weight: 300;
-        font-size: 0.9rem;
-        line-height: 1.8;
-        color: var(--color-white);
-        opacity: 0.5;
-        margin: 0;
-      }
-
-      /* COMING SOON BADGE */
-      .coming-soon {
-        text-align: center;
-        margin-top: 4rem;
-      }
-
-      .coming-soon .badge-pill {
-        display: inline-block;
-        font-family: 'Manrope', sans-serif;
-        font-weight: 300;
-        font-size: 0.75rem;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: var(--color-red);
+      .recruitment-action {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 280px;
+        min-height: 52px;
+        padding: 0.85rem 1.5rem;
         border: 0.09rem solid var(--color-red);
-        border-radius: 20px;
-        padding: 0.35rem 1.25rem;
-        margin-bottom: 1rem;
+        border-radius: 6px;
+        background-color: var(--color-red);
+        color: var(--color-white);
+        font-family: 'Manrope', sans-serif;
+        font-weight: 500;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        text-align: center;
+        text-decoration: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
       }
 
-      .coming-soon p {
-        font-family: 'Manrope', sans-serif;
-        font-weight: 200;
-        font-size: 0.9rem;
+      .recruitment-action:hover,
+      .recruitment-action:focus {
         color: var(--color-white);
-        opacity: 0.4;
-        letter-spacing: 0.04em;
+        text-decoration: none;
+        opacity: 0.85;
+        transform: translateY(-1px);
+      }
+
+      .recruitment-action:disabled {
+        background-color: var(--color-red);
+        border-color: var(--color-red);
+        color: var(--color-white);
+        opacity: 0.6;
+        cursor: default;
       }
 
       @media (max-width: 576px) {
         .recruit-hero h1 { font-size: 2.8rem; }
         .notify-form { flex-direction: column; align-items: center; }
         .notify-form input[type="email"] { width: 100%; max-width: 320px; }
-        .step { gap: 1.5rem; }
+        .recruitment-actions { flex-direction: column; }
+        .recruitment-action { width: 100%; min-width: 0; max-width: 340px; }
       }
     </style>
   </head>
@@ -254,51 +205,12 @@
 
     <div class="divider"></div>
 
-    <!-- WHAT TO EXPECT -->
-    <section id="what-to-expect">
+    <!-- RECRUITMENT LINKS -->
+    <section id="recruitment-links">
       <div class="section-inner">
-        <p class="section-label fade-in">Process</p>
-        <h2 class="serif-regular fade-in">What to Expect</h2>
-        <div class="steps">
-          <div class="step fade-in">
-            <div class="step-number">1</div>
-            <div class="step-content">
-              <h3>Application</h3>
-              <p>Submit a short written application covering your background, interests in finance, and why you want to join WSC.</p>
-            </div>
-          </div>
-          <div class="step fade-in">
-            <div class="step-number">2</div>
-            <div class="step-content">
-              <h3>Coffee Chats</h3>
-              <p>Selected applicants are invited to informal coffee chats with current members to learn more about the club and share their goals.</p>
-            </div>
-          </div>
-          <div class="step fade-in">
-            <div class="step-number">3</div>
-            <div class="step-content">
-              <h3>First Round Interview</h3>
-              <p>Selected candidates complete a first round interview covering finance fundamentals, motivation, and initial fit with the WSC community.</p>
-            </div>
-          </div>
-          <div class="step fade-in">
-            <div class="step-number">4</div>
-            <div class="step-content">
-              <h3>Final Round Interview</h3>
-              <p>Top candidates from the first round are invited back for a final interview, going deeper into technical knowledge and cultural fit.</p>
-            </div>
-          </div>
-          <div class="step fade-in">
-            <div class="step-number">5</div>
-            <div class="step-content">
-              <h3>Offers</h3>
-              <p>Successful candidates receive an offer and are welcomed into the club, with immediate access to mentorship and programming.</p>
-            </div>
-          </div>
-        </div>
-        <div class="coming-soon fade-in">
-          <div class="badge-pill">Coming Soon</div>
-          <p>Exact dates and the application link will be posted here when recruitment opens.</p>
+        <div class="recruitment-actions fade-in">
+          <a class="recruitment-action" href="https://docs.google.com/forms/d/e/1FAIpQLScw3zDrFAIA5O9fAj7mMfRoLd_iznHLYPZKIei-wNsFIW4dTg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Coffee Chat Form Fall 2026</a>
+          <button class="recruitment-action" type="button" disabled>Application Form Fall 2026</button>
         </div>
       </div>
     </section>
