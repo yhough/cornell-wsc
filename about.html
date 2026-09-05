@@ -121,6 +121,121 @@
         margin: 0;
       }
 
+      /* FOUR FINANCE SECTORS */
+      #finance-sectors {
+        padding: 1rem 2rem 7rem;
+        background: var(--color-white);
+        color: var(--color-black);
+      }
+
+      #finance-sectors .section-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .sectors-header {
+        max-width: 680px;
+        margin: 0 auto 3rem;
+        text-align: center;
+      }
+
+      .sectors-header .eyebrow {
+        margin: 0 0 0.75rem;
+        color: var(--color-red);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .sectors-header h2 {
+        margin: 0 0 1rem;
+        color: var(--color-black);
+        font-size: 2.4rem;
+      }
+
+      .sectors-header > p:last-child {
+        margin: 0;
+        color: rgba(18,18,18,0.65);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.94rem;
+        font-weight: 300;
+        line-height: 1.8;
+      }
+
+      .sector-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .sector-card {
+        min-height: 230px;
+        padding: 1.8rem 1.5rem;
+        border: 1px solid rgba(18,18,18,0.12);
+        border-radius: 12px;
+        background: rgba(18,18,18,0.025);
+        transition: border-color 0.25s ease, transform 0.25s ease;
+      }
+
+      .sector-card:hover {
+        border-color: var(--color-red);
+        transform: translateY(-3px);
+      }
+
+      .sector-number {
+        display: block;
+        margin-bottom: 1rem;
+        color: var(--color-red);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+      }
+
+      .sector-card h3 {
+        margin: 0 0 1rem;
+        color: var(--color-black);
+        font-family: 'Baskerville', serif;
+        font-size: 1.4rem;
+      }
+
+      .sector-card p {
+        margin: 0;
+        color: rgba(18,18,18,0.62);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.82rem;
+        font-weight: 300;
+        line-height: 1.75;
+      }
+
+      .sectors-link-wrap { text-align: center; }
+
+      .sectors-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.65rem;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid var(--color-red);
+        border-radius: 7px;
+        color: var(--color-red);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.84rem;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        transition: background-color 0.25s ease, color 0.25s ease;
+      }
+
+      .sectors-link:hover,
+      .sectors-link:focus {
+        background: var(--color-red);
+        color: var(--color-white);
+        text-decoration: none;
+      }
+
       /* LONG-TERM DEVELOPMENT */
       #long-term-development {
         padding: 6rem 2rem;
@@ -244,125 +359,17 @@
 
       .development-card--wide { grid-column: 1 / -1; }
 
-      /* MENTORSHIP PROGRAMS */
-      #mentorship {
-        padding: 6rem 2rem;
-        background-color: var(--color-black);
-        color: var(--color-white);
-      }
-
-      #mentorship .section-inner {
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-
-      #mentorship .section-header {
-        margin-bottom: 4rem;
-      }
-
-      #mentorship .eyebrow {
-        font-family: 'Manrope', sans-serif;
-        font-weight: 300;
-        font-size: 0.75rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--color-red);
-        margin-bottom: 0.75rem;
-      }
-
-      #mentorship h2 {
-        font-size: 2.4rem;
-        color: var(--color-white);
-        margin-bottom: 0.75rem;
-      }
-
-      #mentorship .section-header p {
-        font-family: 'Manrope', sans-serif;
-        font-weight: 300;
-        font-size: 1rem;
-        line-height: 1.9;
-        opacity: 0.6;
-        max-width: 560px;
-      }
-
-      .program-cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        justify-content: center;
-      }
-
-      .program-card {
-        flex: 1 1 380px;
-        max-width: 440px;
-        background-color: rgba(255, 250, 250, 0.05);
-        border: 0.09rem solid rgba(255, 250, 250, 0.15);
-        border-radius: 16px;
-        padding: 2.5rem 2rem;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .program-card:hover {
-        border-color: var(--color-red);
-        box-shadow: 0 0 1.5rem rgba(239, 67, 67, 0.2);
-      }
-
-      .program-card-img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 1.5rem;
-      }
-
-      .program-card h3 {
-        font-family: 'Baskerville', serif;
-        font-size: 1.5rem;
-        color: var(--color-red);
-        margin-bottom: 1rem;
-      }
-
-      .program-card p {
-        font-family: 'Manrope', sans-serif;
-        font-weight: 300;
-        font-size: 0.95rem;
-        line-height: 1.8;
-        opacity: 0.75;
-        margin-bottom: 1.5rem;
-      }
-
-      .program-card ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .program-card ul li {
-        font-family: 'Manrope', sans-serif;
-        font-size: 0.9rem;
-        font-weight: 300;
-        opacity: 0.7;
-        padding: 0.35rem 0;
-        border-bottom: 0.09rem solid rgba(255, 250, 250, 0.08);
-        letter-spacing: 0.02em;
-      }
-
-      .program-card ul li:last-child {
-        border-bottom: none;
-      }
-
-      .program-card ul li::before {
-        content: '— ';
-        color: var(--color-red);
-      }
-
       @media (max-width: 768px) {
         .about-hero h1 { font-size: 2.5rem; }
         #what-is-wsc .section-inner { flex-direction: column; gap: 3rem; }
+        .sector-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .career-journey { grid-template-columns: 1fr; }
         .development-grid { grid-template-columns: 1fr; }
-        .program { flex-direction: column; gap: 1.5rem; }
-        .program-label { flex: none; }
+      }
+
+      @media (max-width: 500px) {
+        .sector-grid { grid-template-columns: 1fr; }
+        .sector-card { min-height: 0; }
       }
     </style>
   </head>
@@ -468,6 +475,44 @@
       </div>
     </section>
 
+    <!-- FOUR FINANCE SECTORS -->
+    <section id="finance-sectors" aria-labelledby="finance-sectors-title">
+      <div class="section-inner">
+        <div class="sectors-header fade-in">
+          <p class="eyebrow">Four Specialized Tracks</p>
+          <h2 class="serif-regular" id="finance-sectors-title">Explore the Breadth of Finance</h2>
+          <p>Members build a shared foundation before developing deeper knowledge across four interconnected areas of the financial industry.</p>
+        </div>
+
+        <div class="sector-grid">
+          <article class="sector-card fade-in">
+            <span class="sector-number">01</span>
+            <h3>Investments</h3>
+            <p>Asset &amp; Wealth Management · Hedge Funds · Sales &amp; Trading · Portfolio Management · Investment Strategy</p>
+          </article>
+          <article class="sector-card fade-in">
+            <span class="sector-number">02</span>
+            <h3>Deals</h3>
+            <p>Investment Banking · Private Equity · Private Credit · Venture Capital · Growth Equity · Restructuring</p>
+          </article>
+          <article class="sector-card fade-in">
+            <span class="sector-number">03</span>
+            <h3>Research</h3>
+            <p>Equity Research · Credit Research · Capital Markets · Leveraged Finance · Fundamental Investing</p>
+          </article>
+          <article class="sector-card fade-in">
+            <span class="sector-number">04</span>
+            <h3>Corporate</h3>
+            <p>Corporate &amp; Commercial Banking · FP&amp;A · Treasury · Internal Audit · Credit &amp; Enterprise Risk</p>
+          </article>
+        </div>
+
+        <div class="sectors-link-wrap fade-in">
+          <a class="sectors-link" href="career-paths.html">Explore all career paths <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
     <!-- LONG-TERM DEVELOPMENT -->
     <section id="long-term-development">
       <div class="section-inner">
@@ -517,49 +562,6 @@
               <li>Cornell Johnson — MBA and graduate business pathways</li>
             </ul>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- MENTORSHIP PROGRAMS -->
-    <section id="mentorship">
-      <div class="section-inner">
-        <div class="section-header fade-in">
-          <p class="eyebrow">Education</p>
-          <h2 class="serif-regular">Mentorship Programs</h2>
-          <p>Two signature programs designed to take members from fundamentals to offer.</p>
-        </div>
-        <div class="program-cards">
-          <div class="program-card fade-in">
-            <img src="images/wall-street-mentorship.jpg" alt="Wall Street Mentorship" class="program-card-img" />
-            <h3>Wall Street Mentorship</h3>
-            <p>
-              A rigorous, end-to-end foundation in finance fundamentals, valuation, and core deal processes —
-              translating theory into practical, interview-ready skill sets through weekly workshops, case studies,
-              and training led by experienced mentors and alumni.
-            </p>
-            <ul>
-              <li>Core Financial &amp; Valuation Concepts</li>
-              <li>Financial Modeling Essentials</li>
-              <li>Industry Applications</li>
-              <li>Accounting &amp; Financial Statement Analysis</li>
-              <li>Leveraged Buyouts (LBOs)</li>
-              <li>Advanced Deal Analysis</li>
-            </ul>
-          </div>
-          <div class="program-card fade-in">
-            <img src="images/interview-prep.jpg" alt="Interview Preparation Mentorship" class="program-card-img" />
-            <h3>Interview Preparation Mentorship</h3>
-            <p>
-              Develops the communication, problem-solving, and analytical skills essential for finance recruiting.
-              Members receive one-on-one feedback, mock interview sessions, and exposure to real formats used by leading firms.
-            </p>
-            <ul>
-              <li>Professional Development &amp; Recruiting Strategy</li>
-              <li>Behavioral &amp; Fit Interview Training</li>
-              <li>Projects, Practice &amp; Peer Development</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
