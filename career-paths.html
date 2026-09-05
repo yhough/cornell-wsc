@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Paths — Cornell Wall Street Club</title>
+    <link rel="icon" href="images/logo-wsc.png" type="image/png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="colors.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+      body {
+        background: var(--color-black);
+        color: var(--color-white);
+      }
+
+      .paths-hero {
+        position: relative;
+        isolation: isolate;
+        min-height: 610px;
+        padding: 12rem 2rem 7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: url('images/cityscape-night.jpg') center / cover no-repeat;
+        text-align: center;
+      }
+
+      .paths-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background:
+          linear-gradient(180deg, rgba(18,18,18,0.62), rgba(18,18,18,0.72) 62%, #121212 100%),
+          linear-gradient(90deg, rgba(21,5,5,0.32), transparent 50%, rgba(8,13,20,0.25));
+      }
+
+      .paths-hero-inner { max-width: 830px; }
+
+      .paths-eyebrow,
+      .section-eyebrow {
+        margin: 0 0 1rem;
+        color: var(--color-red);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.72rem;
+        font-weight: 500;
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+      }
+
+      .paths-hero h1 {
+        margin: 0 0 1.5rem;
+        color: var(--color-white);
+        font-family: 'Baskerville', serif;
+        font-size: clamp(3rem, 7vw, 5.4rem);
+        font-weight: 400;
+        line-height: 1;
+        text-shadow: none;
+      }
+
+      .paths-hero-copy {
+        max-width: 680px;
+        margin: 0 auto;
+        color: rgba(255,250,250,0.72);
+        font-family: 'Manrope', sans-serif;
+        font-size: 1.02rem;
+        font-weight: 300;
+        line-height: 1.85;
+      }
+
+      .current-focus {
+        padding: 1.5rem 2rem 4.5rem;
+        background: var(--color-black);
+        text-align: center;
+      }
+
+      .current-focus h2 {
+        margin: 0 0 1.35rem;
+        color: rgba(255,250,250,0.55);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .focus-list,
+      .career-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.65rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .focus-list li {
+        padding: 0.55rem 1rem;
+        border: 1px solid rgba(239,67,67,0.5);
+        border-radius: 999px;
+        color: rgba(255,250,250,0.82);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 300;
+      }
+
+      .paths-section {
+        padding: 4rem 2rem 8rem;
+        background: var(--color-black);
+      }
+
+      .paths-heading {
+        max-width: 760px;
+        margin: 0 auto 4.5rem;
+        text-align: center;
+      }
+
+      .paths-heading h2 {
+        margin: 0 0 1rem;
+        color: var(--color-white);
+        font-family: 'Baskerville', serif;
+        font-size: clamp(2.3rem, 4vw, 3.5rem);
+        font-weight: 400;
+      }
+
+      .paths-heading p:last-child {
+        margin: 0;
+        color: rgba(255,250,250,0.55);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.92rem;
+        font-weight: 300;
+        line-height: 1.75;
+      }
+
+      .track-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+        max-width: 1180px;
+        margin: 0 auto;
+      }
+
+      .track-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 550px;
+        padding: clamp(2rem, 4vw, 3.25rem);
+        overflow: hidden;
+        border: 1px solid rgba(255,250,250,0.1);
+        border-radius: 12px;
+        background: linear-gradient(145deg, #191919, #141414);
+        transition: border-color 0.25s ease, transform 0.25s ease;
+      }
+
+      .track-card:hover {
+        border-color: rgba(239,67,67,0.48);
+        transform: translateY(-3px);
+      }
+
+      .track-number {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.5rem;
+        color: rgba(239,67,67,0.18);
+        font-family: 'Baskerville', serif;
+        font-size: 4.5rem;
+        line-height: 1;
+      }
+
+      .track-category {
+        margin: 0 0 1.25rem;
+        color: var(--color-red);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .track-card h3 {
+        max-width: 440px;
+        margin: 0 0 1.8rem;
+        color: var(--color-white);
+        font-family: 'Baskerville', serif;
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        font-weight: 400;
+        line-height: 1.1;
+      }
+
+      .learn-label,
+      .careers-label {
+        margin: 0 0 0.65rem;
+        color: rgba(255,250,250,0.48);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.67rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .track-description {
+        margin: 0 0 2rem;
+        color: rgba(255,250,250,0.67);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.88rem;
+        font-weight: 300;
+        line-height: 1.85;
+      }
+
+      .track-careers {
+        margin-top: auto;
+        padding-top: 1.6rem;
+        border-top: 1px solid rgba(255,250,250,0.09);
+      }
+
+      .career-list { justify-content: flex-start; }
+
+      .career-list li {
+        color: rgba(255,250,250,0.72);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 300;
+      }
+
+      .career-list li:not(:last-child)::after {
+        content: '•';
+        margin-left: 0.65rem;
+        color: var(--color-red);
+      }
+
+      @media (max-width: 900px) {
+        .track-grid { grid-template-columns: 1fr; max-width: 680px; }
+        .track-card { min-height: 0; }
+      }
+
+      @media (max-width: 576px) {
+        .paths-hero { min-height: 540px; padding: 10rem 1.5rem 5rem; }
+        .paths-hero-copy { font-size: 0.92rem; }
+        .current-focus { padding-inline: 1.25rem; }
+        .paths-section { padding: 3rem 1rem 6rem; }
+        .track-card { padding: 2rem 1.5rem; }
+        .track-number { font-size: 3.7rem; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <a class="navbar-brand" href="index.html">
+        <img src="./images/logo-wsc.png" height="50" alt="Cornell Wall Street Club" />
+      </a>
+      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link sans-regular" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link sans-regular" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link sans-regular" href="career-paths.html" aria-current="page">Career Paths</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link sans-regular dropdown-toggle" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Team</a>
+            <div class="dropdown-menu" aria-labelledby="teamDropdown">
+              <a class="dropdown-item sans-regular" href="eboard.html">Executive Board</a>
+              <a class="dropdown-item sans-regular" href="mentors.html">Mentors</a>
+              <a class="dropdown-item sans-regular" href="members.html">Members</a>
+              <a class="dropdown-item sans-regular" href="advisors.html">Advisor</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link sans-regular" href="recruitment.html">Recruitment</a></li>
+          <li class="nav-item"><a class="nav-link sans-regular" href="members-only.html">Members Only</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="paths-hero">
+      <div class="paths-hero-inner">
+        <p class="paths-eyebrow fade-in">New Member Education</p>
+        <h1 class="fade-in">Finance Career Paths</h1>
+        <p class="paths-hero-copy fade-in">Build a broad foundation in finance, then explore the work, skills, and decisions that distinguish investing, transactions, research, and corporate finance.</p>
+      </div>
+    </header>
+
+    <section class="current-focus" aria-labelledby="current-focus-title">
+      <h2 id="current-focus-title" class="fade-in">Current Areas of Focus</h2>
+      <ul class="focus-list fade-in">
+        <li>Investment Banking</li>
+        <li>Asset &amp; Wealth Management</li>
+        <li>Sales &amp; Trading</li>
+        <li>Private Equity</li>
+        <li>Private Credit</li>
+      </ul>
+    </section>
+
+    <main class="paths-section">
+      <div class="paths-heading fade-in">
+        <p class="section-eyebrow">Explore the Industry</p>
+        <h2>Four Ways to Think About Finance</h2>
+        <p>Each track connects practical skills with the roles where those skills are used, helping members understand where their interests may fit.</p>
+      </div>
+
+      <div class="track-grid">
+        <article class="track-card fade-in">
+          <span class="track-number" aria-hidden="true">01</span>
+          <p class="track-category">Investments</p>
+          <h3>Investment Management &amp; Markets</h3>
+          <p class="learn-label">What new members will learn</p>
+          <p class="track-description">Develop an understanding of how institutional investors allocate capital and make investment decisions across public markets. Members will learn portfolio construction, asset allocation, equity and fixed-income fundamentals, risk and return, macroeconomic drivers, derivatives, and how to develop and pitch an investment thesis. The track will also explore how investors and trading desks form market views and manage risk differently.</p>
+          <div class="track-careers">
+            <p class="careers-label">Potential career paths</p>
+            <ul class="career-list">
+              <li>Asset Management</li><li>Wealth Management / Private Banking</li><li>Hedge Funds</li><li>Sales &amp; Trading</li><li>Investment Strategy</li><li>Portfolio Management</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="track-card fade-in">
+          <span class="track-number" aria-hidden="true">02</span>
+          <p class="track-category">Deals</p>
+          <h3>Investment Banking &amp; Private Markets</h3>
+          <p class="learn-label">What new members will learn</p>
+          <p class="track-description">Build the technical foundation required to analyze and execute transactions and private investments. Members will learn financial statement analysis, accounting, valuation methodologies, DCFs, comparable companies, precedent transactions, M&amp;A, LBO modeling, debt financing, and transaction structures. Members will learn how companies, financial sponsors, and lenders approach transactions from different perspectives.</p>
+          <div class="track-careers">
+            <p class="careers-label">Potential career paths</p>
+            <ul class="career-list">
+              <li>Investment Banking</li><li>Private Equity</li><li>Private Credit</li><li>Growth Equity</li><li>Venture Capital</li><li>Restructuring</li><li>Corporate Development</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="track-card fade-in">
+          <span class="track-number" aria-hidden="true">03</span>
+          <p class="track-category">Research</p>
+          <h3>Research &amp; Capital Markets</h3>
+          <p class="learn-label">What new members will learn</p>
+          <p class="track-description">Learn how to analyze companies, industries, and securities and translate that analysis into investment and financing recommendations. Members will evaluate business models, competitive positioning, financial statements, earnings, industry dynamics, catalysts, and risks; build financial forecasts and valuation models; assess credit quality and capital structures; and understand how companies access equity and debt markets.</p>
+          <div class="track-careers">
+            <p class="careers-label">Potential career paths</p>
+            <ul class="career-list">
+              <li>Equity Research</li><li>Credit Research</li><li>Equity Capital Markets (ECM)</li><li>Debt Capital Markets (DCM)</li><li>Leveraged Finance</li><li>Fundamental Investing</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="track-card fade-in">
+          <span class="track-number" aria-hidden="true">04</span>
+          <p class="track-category">Corporate</p>
+          <h3>Corporate Banking &amp; Finance</h3>
+          <p class="learn-label">What new members will learn</p>
+          <p class="track-description">Understand how companies finance their operations, manage capital, and interact with financial institutions. Members will learn credit analysis, lending fundamentals, cash-flow analysis, capital structures, budgeting and forecasting, FP&amp;A, treasury and liquidity management, financial controls, and risk assessment. Members will also explore how banks evaluate corporate clients and structure financing solutions across different industries.</p>
+          <div class="track-careers">
+            <p class="careers-label">Potential career paths</p>
+            <ul class="career-list">
+              <li>Corporate Banking</li><li>Commercial Banking</li><li>FP&amp;A</li><li>Treasury</li><li>Corporate Finance</li><li>Credit Risk</li><li>Enterprise Risk</li><li>Internal Audit</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="sans-regular">
+      <div class="footer-content fade-in">
+        <p>&copy; 2026 Cornell Wall Street Club</p>
+        <p>This organization is a registered student organization of Cornell University</p>
+        <p><a href="https://hr.cornell.edu/about/workplace-rights/equal-education-and-employment" target="_blank" rel="noopener noreferrer">Equal Education and Employment</a></p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/cornellwsc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/111008953/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        });
+        document.querySelectorAll('.fade-in').forEach(function (element) { observer.observe(element); });
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

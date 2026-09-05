@@ -121,6 +121,129 @@
         margin: 0;
       }
 
+      /* LONG-TERM DEVELOPMENT */
+      #long-term-development {
+        padding: 6rem 2rem;
+        background: #181818;
+        color: var(--color-white);
+      }
+
+      #long-term-development .section-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .development-header {
+        max-width: 720px;
+        margin-bottom: 3.5rem;
+      }
+
+      .development-header .eyebrow {
+        margin: 0 0 0.75rem;
+        color: var(--color-red);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 300;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .development-header h2 {
+        margin: 0 0 1rem;
+        color: var(--color-white);
+        font-size: 2.4rem;
+      }
+
+      .development-header > p:last-child {
+        margin: 0;
+        color: rgba(255,250,250,0.64);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.98rem;
+        font-weight: 300;
+        line-height: 1.85;
+      }
+
+      .career-journey {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1px;
+        margin: 0 0 3.5rem;
+        background: rgba(255,250,250,0.1);
+        border: 1px solid rgba(255,250,250,0.1);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .journey-step {
+        padding: 1.7rem 1rem;
+        background: #181818;
+        text-align: center;
+      }
+
+      .journey-step strong {
+        display: block;
+        margin-bottom: 0.45rem;
+        color: var(--color-red);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+      }
+
+      .journey-step span {
+        color: rgba(255,250,250,0.62);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.76rem;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+
+      .development-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .development-card {
+        padding: 2.25rem;
+        border: 1px solid rgba(255,250,250,0.12);
+        border-radius: 14px;
+        background: rgba(255,250,250,0.035);
+      }
+
+      .development-card h3 {
+        margin: 0 0 1rem;
+        color: var(--color-white);
+        font-family: 'Baskerville', serif;
+        font-size: 1.45rem;
+      }
+
+      .development-card p {
+        margin: 0 0 1.25rem;
+        color: rgba(255,250,250,0.62);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.88rem;
+        font-weight: 300;
+        line-height: 1.8;
+      }
+
+      .development-card ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .development-card li {
+        padding: 0.35rem 0;
+        color: rgba(255,250,250,0.72);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
+
+      .development-card li::before { content: '— '; color: var(--color-red); }
+
+      .development-card--wide { grid-column: 1 / -1; }
+
       /* MENTORSHIP PROGRAMS */
       #mentorship {
         padding: 6rem 2rem;
@@ -236,6 +359,8 @@
       @media (max-width: 768px) {
         .about-hero h1 { font-size: 2.5rem; }
         #what-is-wsc .section-inner { flex-direction: column; gap: 3rem; }
+        .career-journey { grid-template-columns: 1fr; }
+        .development-grid { grid-template-columns: 1fr; }
         .program { flex-direction: column; gap: 1.5rem; }
         .program-label { flex: none; }
       }
@@ -266,6 +391,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link sans-regular" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sans-regular" href="career-paths.html">Career Paths</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link sans-regular dropdown-toggle" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Team</a>
@@ -298,40 +426,97 @@
           <p class="eyebrow">Who we are</p>
           <h2 class="serif-regular">Cornell Wall Street Club</h2>
           <p>
-            WSC is dedicated to accelerating members' careers through structured education, mentorship, and direct
-            access to the financial industry. We bring together ambitious students and connect them with the people,
-            knowledge, and opportunities needed to break into Wall Street.
+            Cornell Wall Street Club prepares students to build long-term careers across finance by developing transferable skills, providing exposure to the breadth of Wall Street, and connecting members with professionals, MBA students, and future graduate-school opportunities.
+          </p>
+          <p>
+            Through four specialized finance tracks, members develop skills that extend across roles and industries while exploring paths from investment banking and sales &amp; trading to private credit, alternative assets, investment management, and emerging areas of finance.
+          </p>
+          <p>
+            Our goal is not simply to help members land their first internship or job. We give them the skills, network, and perspective to navigate an entire career.
           </p>
         </div>
         <div class="wsc-pillars">
           <div class="wsc-pillar fade-in">
             <i class="fas fa-rocket fa-lg"></i>
             <div>
-              <h3>Accelerating Careers</h3>
-              <p>Structured preparation and strategic resources to help members land roles in competitive financial sectors.</p>
+              <h3>Transferable Skills</h3>
+              <p>Financial analysis, valuation, markets, research, modeling, communication, leadership, and commercial judgment that remain valuable across roles.</p>
             </div>
           </div>
           <div class="wsc-pillar fade-in">
             <i class="fas fa-globe fa-lg"></i>
             <div>
               <h3>Expansive Network</h3>
-              <p>Access to a global community of industry leaders, alumni, and top-tier financial institutions.</p>
+              <p>Relationships with industry professionals, recruiters, Cornell alumni, MBA students, and a community of ambitious peers.</p>
             </div>
           </div>
           <div class="wsc-pillar fade-in">
             <i class="fas fa-user-graduate fa-lg"></i>
             <div>
-              <h3>Targeted Mentorship</h3>
-              <p>Personalized mentorship and skill-building to excel in recruiting and long-term career development.</p>
+              <h3>Career Flexibility</h3>
+              <p>Preparation for careers that evolve—from banking to private credit, research to asset management, or finance to graduate business education.</p>
             </div>
           </div>
           <div class="wsc-pillar fade-in">
             <i class="fas fa-briefcase fa-lg"></i>
             <div>
               <h3>Industry Access</h3>
-              <p>Workshops, speaker panels, and firm partnerships that put members in direct contact with finance professionals.</p>
+              <p>Workshops, panels, firm visits, and conversations that reveal opportunities across the broader financial ecosystem.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LONG-TERM DEVELOPMENT -->
+    <section id="long-term-development">
+      <div class="section-inner">
+        <div class="development-header fade-in">
+          <p class="eyebrow">Beyond the First Offer</p>
+          <h2 class="serif-regular">Built for Long-Term Career Development</h2>
+          <p>Finance careers rarely move in a perfectly straight line. WSC develops capabilities that remain useful across roles, firms, and every stage of a member's career.</p>
+        </div>
+
+        <div class="career-journey fade-in" aria-label="WSC member development journey">
+          <div class="journey-step"><strong>EXPLORE</strong><span>The breadth of Wall Street</span></div>
+          <div class="journey-step"><strong>BUILD</strong><span>Financial and professional skills</span></div>
+          <div class="journey-step"><strong>CONNECT</strong><span>With professionals, alumni, and MBA students</span></div>
+          <div class="journey-step"><strong>LAUNCH</strong><span>Into internships and full-time roles</span></div>
+          <div class="journey-step"><strong>ADVANCE</strong><span>Through continued mentorship and MBA preparation</span></div>
+        </div>
+
+        <div class="development-grid">
+          <article class="development-card fade-in">
+            <h3>Explore the Financial Ecosystem</h3>
+            <p>You do not need to know exactly where you want to end up. WSC introduces members to opportunities beyond the handful of roles most students encounter first.</p>
+            <ul>
+              <li>Private Credit, Secondaries &amp; Alternative Assets</li>
+              <li>Infrastructure, Real Assets &amp; Restructuring</li>
+              <li>Capital Markets, Research &amp; Institutional Sales</li>
+              <li>Investor Relations, Strategic Finance &amp; Family Offices</li>
+            </ul>
+          </article>
+          <article class="development-card fade-in">
+            <h3>MBA &amp; Graduate Business Exposure</h3>
+            <p>Members learn how graduate business education can fit into a long-term Wall Street career strategy through conversations, resources, and programming.</p>
+            <ul>
+              <li>Cornell MBA students and MBA alumni</li>
+              <li>Deferred MBA students and admits</li>
+              <li>Admissions and program representatives, where available</li>
+              <li>Application strategy, testing, resumes, essays, and career stories</li>
+            </ul>
+          </article>
+          <article class="development-card development-card--wide fade-in">
+            <h3>Explore Deferred MBA Opportunities</h3>
+            <p>Members can learn about leading deferred-enrollment pathways and prepare for the application process through information sessions, GMAT/GRE planning, resume development, essay preparation, and conversations with current MBA students and deferred admits.</p>
+            <ul>
+              <li>Wharton — Moelis Advance Access Program</li>
+              <li>Harvard Business School — 2+2</li>
+              <li>Columbia Business School — Deferred Enrollment Program</li>
+              <li>UVA Darden — Future Year Scholars Program</li>
+              <li>Cornell Johnson — MBA and graduate business pathways</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>

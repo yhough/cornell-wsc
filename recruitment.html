@@ -100,6 +100,107 @@
         margin: 0 auto;
       }
 
+      /* MEMBER EXPERIENCE */
+      #member-experience {
+        padding: 5rem 2rem 7rem;
+        background: var(--color-black);
+        color: var(--color-white);
+      }
+
+      #member-experience .section-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+
+      .experience-header {
+        max-width: 760px;
+        margin: 0 auto 3.5rem;
+        text-align: center;
+      }
+
+      .experience-header .eyebrow {
+        margin: 0 0 0.8rem;
+        color: var(--color-red);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.72rem;
+        font-weight: 400;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      .experience-header h2 {
+        margin: 0 0 1.2rem;
+        color: var(--color-white);
+        font-family: 'Baskerville', serif;
+        font-size: clamp(2.3rem, 4vw, 3.5rem);
+        font-weight: 400;
+      }
+
+      .experience-header > p:last-child {
+        margin: 0;
+        color: rgba(255,250,250,0.58);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.96rem;
+        font-weight: 300;
+        line-height: 1.85;
+      }
+
+      .experience-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+        margin-bottom: 3rem;
+      }
+
+      .experience-card {
+        padding: 2rem;
+        border: 1px solid rgba(255,250,250,0.11);
+        border-radius: 12px;
+        background: #181818;
+      }
+
+      .experience-card .card-number {
+        display: block;
+        margin-bottom: 1.1rem;
+        color: var(--color-red);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.68rem;
+        letter-spacing: 0.16em;
+      }
+
+      .experience-card h3 {
+        margin: 0 0 0.8rem;
+        color: var(--color-white);
+        font-family: 'Baskerville', serif;
+        font-size: 1.35rem;
+      }
+
+      .experience-card p {
+        margin: 0;
+        color: rgba(255,250,250,0.58);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.84rem;
+        font-weight: 300;
+        line-height: 1.75;
+      }
+
+      .experience-card a { color: var(--color-red); text-decoration: none; }
+      .experience-card a:hover { text-decoration: underline; }
+
+      .skills-strip {
+        padding: 1.5rem 1.75rem;
+        border-left: 2px solid var(--color-red);
+        background: rgba(255,250,250,0.035);
+        color: rgba(255,250,250,0.68);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.82rem;
+        font-weight: 300;
+        line-height: 1.8;
+        text-align: center;
+      }
+
+      .skills-strip strong { color: var(--color-white); font-weight: 500; }
+
       /* RECRUITMENT LINKS */
       #recruitment-links {
         background-color: var(--color-black);
@@ -246,10 +347,15 @@
         cursor: default;
       }
 
+      @media (max-width: 900px) {
+        .experience-grid { grid-template-columns: 1fr; }
+      }
+
       @media (max-width: 576px) {
         .recruit-hero h1 { font-size: 2.8rem; }
         .notify-form { flex-direction: column; align-items: center; }
         .notify-form input[type="email"] { width: 100%; max-width: 320px; }
+        #member-experience { padding: 4rem 1rem 5rem; }
         .recruitment-timeline {
           margin-bottom: 3rem;
           padding: 5rem 1.5rem 5.5rem;
@@ -277,6 +383,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a class="nav-link sans-regular" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link sans-regular" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link sans-regular" href="career-paths.html">Career Paths</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link sans-regular dropdown-toggle" href="#" id="teamDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Team</a>
             <div class="dropdown-menu" aria-labelledby="teamDropdown">
@@ -296,7 +403,7 @@
     <div class="recruit-hero">
       <p class="eyebrow fade-in">Applications</p>
       <h1 class="serif-regular fade-in">Join WSC</h1>
-      <p class="fade-in">Recruitment details for the upcoming semester will be announced soon. Enter your email to be notified when applications open.</p>
+      <p class="fade-in">Join a community built to help you explore finance, develop transferable skills, and build relationships that support an entire career—not only your first internship.</p>
       <div class="notify-form fade-in">
         <input type="email" placeholder="your@cornell.edu" />
         <button type="button">Notify Me</button>
@@ -304,6 +411,37 @@
     </div>
 
     <div class="divider"></div>
+
+    <!-- MEMBER EXPERIENCE -->
+    <section id="member-experience">
+      <div class="section-inner">
+        <div class="experience-header fade-in">
+          <p class="eyebrow">The Member Experience</p>
+          <h2>Preparation That Grows With You</h2>
+          <p>Each member selects a track based on their interests. Rather than preparing students for one job, every track builds analytical, financial, and professional capabilities that transfer across Wall Street careers.</p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-card fade-in">
+            <span class="card-number">01 · EXPLORE</span>
+            <h3>Four Specialized Tracks</h3>
+            <p>Explore investing, deals, research, and corporate finance while learning how roles and industries connect. <a href="career-paths.html">View the career paths</a>.</p>
+          </article>
+          <article class="experience-card fade-in">
+            <span class="card-number">02 · BUILD</span>
+            <h3>Transferable Skills</h3>
+            <p>Develop financial analysis, valuation, markets, research, credit, modeling, presentation, communication, leadership, and commercial judgment.</p>
+          </article>
+          <article class="experience-card fade-in">
+            <span class="card-number">03 · CONNECT &amp; ADVANCE</span>
+            <h3>Industry &amp; MBA Access</h3>
+            <p>Connect with professionals, Cornell alumni, MBA students, deferred admits, and peers while exploring graduate business education and long-term career transitions.</p>
+          </article>
+        </div>
+
+        <div class="skills-strip fade-in"><strong>Explore → Build → Connect → Launch → Advance.</strong> WSC prepares members for careers that can evolve from banking to private credit, research to asset management, or industry experience to an MBA.</div>
+      </div>
+    </section>
 
     <!-- RECRUITMENT LINKS -->
     <section id="recruitment-links">
