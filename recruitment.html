@@ -258,8 +258,8 @@
 
       .timeline-events {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 4.75rem clamp(2rem, 6vw, 6rem);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3.75rem clamp(3rem, 8vw, 8rem);
         margin: 0;
         padding: 0;
         list-style: none;
@@ -267,7 +267,7 @@
 
       .timeline-event-card {
         position: relative;
-        min-height: 86px;
+        min-height: 150px;
         padding-top: 1.4rem;
         text-align: center;
       }
@@ -283,10 +283,8 @@
         transform: translateX(-50%);
       }
 
-      .timeline-event-card:last-child:nth-child(3n + 1) { grid-column: 2; }
-
       .timeline-event-card h3 {
-        margin: 0 0 0.8rem;
+        margin: 0 0 0.45rem;
         color: var(--color-white);
         font-family: 'Manrope', sans-serif;
         font-size: clamp(1rem, 1.55vw, 1.25rem);
@@ -296,11 +294,22 @@
 
       .timeline-event-card time {
         display: block;
+        margin-bottom: 0.65rem;
         color: rgba(255, 250, 250, 0.82);
         font-family: 'Manrope', sans-serif;
         font-size: 0.82rem;
         font-weight: 300;
         letter-spacing: 0.025em;
+      }
+
+      .timeline-event-card p {
+        max-width: 390px;
+        margin: 0 auto;
+        color: rgba(255, 250, 250, 0.58);
+        font-family: 'Manrope', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 300;
+        line-height: 1.65;
       }
 
       .recruitment-actions {
@@ -453,30 +462,42 @@
             <li class="timeline-event-card">
               <h3>Coffee Chat Form Opens</h3>
               <time datetime="2026-08-31">Monday, August 31</time>
+              <p>Submit the form to connect with current members over coffee.</p>
             </li>
             <li class="timeline-event-card">
               <h3>Breaking into Professional Clubs</h3>
               <time datetime="2026-09-03">Thursday, September 3</time>
+              <p>A panel on navigating the recruiting process and making the most of your college experience.</p>
             </li>
             <li class="timeline-event-card">
               <h3>Club Fest</h3>
               <time datetime="2026-09-05">Saturday, September 5</time>
+              <p>Meet our team, learn about our initiatives, and ask questions.</p>
             </li>
             <li class="timeline-event-card">
-              <h3>Application Opens</h3>
+              <h3>Meet &amp; Greet</h3>
               <time datetime="2026-09-08">Tuesday, September 8</time>
+              <p>Get to know our executive board and members in a casual setting.</p>
             </li>
             <li class="timeline-event-card">
-              <h3>Resume Review &amp; Info Session</h3>
+              <h3>Resume Review Session</h3>
               <time datetime="2026-09-10">Thursday, September 10</time>
+              <p>Get feedback from members and strengthen your application materials.</p>
             </li>
             <li class="timeline-event-card">
-              <h3>Coffee Chat &amp; Application Forms Close</h3>
-              <time datetime="2026-09-11">Friday, September 11</time>
+              <h3>Intro to Finance Sectors</h3>
+              <time datetime="2026-09-15">Tuesday, September 15</time>
+              <p>An overview of key industries, roles, and current market trends from club members.</p>
             </li>
             <li class="timeline-event-card">
-              <h3>First Round Interviews</h3>
-              <time datetime="2026-09-12">Saturday, September 12</time>
+              <h3>Explore Deferred MBA Opportunities</h3>
+              <time datetime="2026-09-17">Thursday, September 17</time>
+              <p>Learn from alumni and current MBA students about timing, strategy, and their experiences.</p>
+            </li>
+            <li class="timeline-event-card">
+              <h3>Application Closes</h3>
+              <time datetime="2026-09-18T18:00-04:00">Friday, September 18 · 6:00 PM ET</time>
+              <p>Submit your application by the deadline.</p>
             </li>
           </ol>
         </section>
